@@ -7,7 +7,7 @@ const port = 3001;
 
 app.use(express.json());
 
-app.use(cors()); // Permite todas las peticiones cross-origin (para desarrollo)
+app.use(cors()); // cross-origin for development
 
 app.get("/", (_req, res) => {
   res.send("Bob’s Corn API is running!");
@@ -16,29 +16,32 @@ app.get("/", (_req, res) => {
 // Init SQLite DB
 const db = new Database("bobcorn.db");
 
-// Crear tabla si no existe
-db.prepare(`
+// Create table if it doesnt exist
+db.prepare(
+  `
   CREATE TABLE IF NOT EXISTS corn_purchases (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     client_id TEXT NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
   )
-`).run();
+`
+).run();
 
-// Ruta para comprar maíz
+// Route
 app.post("/buy-corn", (req: Request, res: Response) => {
   const { client_id } = req.body;
   if (!client_id) {
     return res.status(400).json({ error: "client_id is required" });
   }
 
-  // Obtener la última compra del cliente
   const lastPurchase = db
-    .prepare(`
+    .prepare(
+      `
       SELECT created_at FROM corn_purchases 
       WHERE client_id = ? 
       ORDER BY created_at DESC LIMIT 1
-    `)
+    `
+    )
     .get(client_id) as { created_at: string } | undefined;
 
   const now = new Date();
@@ -51,10 +54,12 @@ app.post("/buy-corn", (req: Request, res: Response) => {
     }
   }
 
-  // Registrar nueva compra
-  db.prepare(`
+  // Register new purchase
+  db.prepare(
+    `
     INSERT INTO corn_purchases (client_id) VALUES (?)
-  `).run(client_id);
+  `
+  ).run(client_id);
 
   res.status(200).json({ message: "🌽 Enjoy your corn!" });
 });
