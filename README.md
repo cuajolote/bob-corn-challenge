@@ -17,7 +17,6 @@ Repository: https://github.com/cuajolote/bob-corn-challenge
 - ✅ See a visual count of successful purchases
 - ✅ Clear feedback on success/error
 - ✅ Clean, responsive UI
-- ✅ Inspired by [getrenterra.com](https://getrenterra.com/)
 - ✅ Bonus: clientId input, route structure, and simple navigation
 
 ---
@@ -60,20 +59,21 @@ bob-corn-challenge/
 
 ### 🧱 Backend
 
-cd backend
-npm install
-npm run dev
-The server will run at: http://localhost:3001
+- cd backend
+- npm install
+- npm run dev
+- The server will run at: http://localhost:3001
 
 ### 🖥️ Frontend
 
-cd frontend
-npm install
-npm start
-The app will run at: http://localhost:3000
+- cd frontend
+- npm install
+- npm start
+- The app will run at: http://localhost:3000
 
 ### 📸 Screenshots
 
-Landing Page
-
-Buy Corn Page
+- Landing Page
+![image](https://github.com/user-attachments/assets/f0a3b836-dbbb-4e2b-b778-c94e4b6a39db)
+- Buy Corn Page
+![image](https://github.com/user-attachments/assets/db257ab1-944a-429a-a0c5-956fe6f4548d)
