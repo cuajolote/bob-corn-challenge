@@ -1,1 +1,80 @@
 # bob-corn-challenge
+This project was built as part of a code challenge for a frontend-focused role. The goal was to create a small full-stack application that allows clients to "buy corn" while enforcing a **rate limit of one corn per client per minute**.
+
+Repository: https://github.com/cuajolote/bob-corn-challenge
+
+---
+
+## 📋 Requirements
+
+### ✅ Backend
+- ✅ Implement a rate limiter using a SQL database (SQLite)
+- ✅ Clients can POST to buy corn
+- ✅ Reject purchases if attempted more than once per minute (429 Too Many Requests)
+
+### ✅ Frontend
+- ✅ Users can buy corn by clicking a button
+- ✅ See a visual count of successful purchases
+- ✅ Clear feedback on success/error
+- ✅ Clean, responsive UI
+- ✅ Inspired by [getrenterra.com](https://getrenterra.com/)
+- ✅ Bonus: clientId input, route structure, and simple navigation
+
+---
+
+## 🧱 Tech Stack
+
+### 🖥️ Frontend
+- [React (CRA)](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Router](https://reactrouter.com/en/main)
+- [TypeScript](https://www.typescriptlang.org/)
+
+### ⚙️ Backend
+- [Node.js + Express](https://expressjs.com/)
+- [better-sqlite3](https://github.com/WiseLibs/better-sqlite3)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 📦 Project Structure
+
+bob-corn-challenge/
+├── backend/
+│ └── src/
+│ └── index.ts # Express server and rate-limiting logic
+├── frontend/
+│ ├── public/
+│ └── src/
+│ ├── components/ # Reusable UI components (BuyCornButton, Alert, etc.)
+│ ├── hooks/ # useBuyCorn.ts
+│ ├── pages/ # LandingPage.tsx, BuyCornPage.tsx
+│ ├── routes/ # AppRoutes.tsx
+│ ├── services/ # api.ts
+│ ├── App.tsx
+│ └── main.tsx
+
+---
+
+## 🚀 Getting Started
+
+### 🧱 Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+The server will run at: http://localhost:3001
+
+### 🖥️ Frontend
+
+cd frontend
+npm install
+npm start
+The app will run at: http://localhost:3000
+
+### 📸 Screenshots
+
+Landing Page
+
+Buy Corn Page

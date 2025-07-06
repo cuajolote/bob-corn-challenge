@@ -1,1 +1,0 @@
-'Example test for the components structure'

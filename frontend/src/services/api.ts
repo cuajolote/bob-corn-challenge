@@ -11,9 +11,9 @@ export async function buyCorn(clientId: string): Promise<{ message?: string; err
       return { message: data.message };
     } else {
       const errorData = await res.json();
-      return { error: errorData.error || "Error desconocido" };
+      return { error: errorData.error || "Unknown error" };
     }
   } catch (error) {
-    return { error: "Error de conexión" };
+    return { error: "Conection error" };
   }
 }

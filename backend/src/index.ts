@@ -49,6 +49,7 @@ app.post("/buy-corn", (req: Request, res: Response) => {
   if (lastPurchase) {
     const last = new Date(lastPurchase.created_at);
     const diff = (now.getTime() - last.getTime()) / 1000; // seconds
+
     if (diff < 60) {
       return res.status(429).json({ error: "Too many corns!" });
     }

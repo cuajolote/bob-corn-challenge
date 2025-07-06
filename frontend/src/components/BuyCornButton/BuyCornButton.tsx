@@ -20,6 +20,7 @@ export function BuyCornButton({
       type="button"
       aria-live="polite"
       aria-label="Buy corn button"
+      data-testid="buycorn-button"
     >
       {loading ? "Buying..." : "Buy Corn 🌽"}
     </button>
