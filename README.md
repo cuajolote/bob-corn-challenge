@@ -76,5 +76,8 @@ bob-corn-challenge/
 
 - Landing Page
 ![image](https://github.com/user-attachments/assets/f0a3b836-dbbb-4e2b-b778-c94e4b6a39db)
-- Buy Corn Page
+- Buy Corn Page (React + TS)
 ![image](https://github.com/user-attachments/assets/db257ab1-944a-429a-a0c5-956fe6f4548d)
+- Buy Corn Page (Backbone.js)
+<img width="2526" height="969" alt="image" src="https://github.com/user-attachments/assets/c99de9c0-2874-4cdc-a059-817ed99386da" />
+
