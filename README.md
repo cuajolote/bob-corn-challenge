@@ -13,7 +13,7 @@ Repository: https://github.com/cuajolote/bob-corn-challenge
 - ✅ Reject purchases if attempted more than once per minute (429 Too Many Requests)
 
 ### ✅ Frontend
-- ✅ Users can buy corn by clicking a button
+- ✅ Users can buy corn with React and Backbone.js by clicking a button
 - ✅ See a visual count of successful purchases
 - ✅ Clear feedback on success/error
 - ✅ Clean, responsive UI
@@ -28,6 +28,7 @@ Repository: https://github.com/cuajolote/bob-corn-challenge
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React Router](https://reactrouter.com/en/main)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Backbone.js](https://backbonejs.org/)
 
 ### ⚙️ Backend
 - [Node.js + Express](https://expressjs.com/)
